@@ -1,0 +1,51 @@
+.categories-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 3rem;
+}
+
+.card img {
+  object-fit: none;
+  max-width: 10rem;
+  max-height: 10rem;
+  /* margin: 2rem 2rem; */
+}
+
+.card {
+  width: 15rem;
+  /* border: 2px solid green; */
+  border: 0.1rem solid #eee;
+  margin-top: 2rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border: 00.1rem solid black;
+  cursor: pointer;
+}
+
+.card p {
+  margin: 0.5rem 1rem;
+  text-align: justify;
+}
+
+.img-container {
+  text-align: center;
+  /* border: 2px solid black; */
+}
+.card .img-container {
+  width: 16rem;
+  margin: 0 auto;
+  height: 12rem;
+}
+
+.card-button {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+hr {
+  width: 50% !important;
+}

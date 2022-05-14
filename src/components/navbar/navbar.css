@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+  align-items: center;
+  background-color: aquamarine;
+}
+
+.logo {
+  margin-left: 1rem;
+  font-weight: 900;
+  font-size: large;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.theme-toggle {
+  margin-right: 1.5rem;
+}

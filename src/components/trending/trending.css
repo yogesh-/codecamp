@@ -1,0 +1,9 @@
+.trending-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.trending-container hr {
+  width: 50%;
+}
