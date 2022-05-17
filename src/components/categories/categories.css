@@ -1,0 +1,47 @@
+.categories-container {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  margin: 0 3rem;
+}
+
+.card img {
+  object-fit: none;
+  max-width: 10rem;
+  max-height: 10rem;
+}
+
+.card {
+  width: 15rem;
+  border: 0.1rem solid #eee;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border: 00.1rem solid black;
+}
+
+.card p {
+  margin: 0.5rem 1rem;
+  text-align: justify;
+}
+
+.img-container {
+  text-align: center;
+}
+.card .img-container {
+  width: 16rem;
+  margin: 0 auto;
+  height: 12rem;
+}
+
+.card-button {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+hr {
+  width: 50% !important;
+}
