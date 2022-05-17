@@ -10,8 +10,6 @@ export const Home = () => {
       <Banner />
       <Categories />
       <Trending />
-      <p>Hello world this is my homepage</p>
-      <p>I am just testing the waters</p>
     </div>
   );
 };
