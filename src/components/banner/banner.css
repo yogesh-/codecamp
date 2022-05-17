@@ -1,9 +1,7 @@
 .banner {
   display: flex;
   flex-direction: row;
-  /* border: 2px solid red; */
   margin: 0 4rem;
-  /* flex-flow: wrap; */
 }
 
 .text-group {
@@ -19,8 +17,8 @@
 }
 
 .right-image img {
-  height: 500px;
-  width: 500px;
+  height: 31rem;
+  width: 31rem;
 }
 
 .heading {
