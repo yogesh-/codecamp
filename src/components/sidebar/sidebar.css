@@ -1,0 +1,25 @@
+li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  padding-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1rem;
+  margin-top: 2rem;
+}
+
+.icon-name {
+  padding-left: 1rem;
+}
+
+.sidebar-menu {
+  width: 9rem;
+  border: 2px solid red;
+}
+
+.hide {
+  display: none;
+}

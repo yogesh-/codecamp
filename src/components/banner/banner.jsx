@@ -1,6 +1,7 @@
 import "./banner.css";
 import Button from "@mui/material/Button";
 import learning from "../../assets/coding.svg";
+import { Link } from "react-router-dom";
 
 export const Banner = () => {
   return (
@@ -13,7 +14,14 @@ export const Banner = () => {
               Start from the basics and master HTML, CSS, JavaScript and
               ReactJS.
             </p>
-            <Button variant="contained" color="success" sx={{ mt: 1, mb: 1 }}>
+
+            <Button
+              component={Link}
+              to="/videos"
+              variant="contained"
+              color="success"
+              sx={{ mt: 1, mb: 1 }}
+            >
               EXPLORE NOW &#62;
             </Button>
           </div>
