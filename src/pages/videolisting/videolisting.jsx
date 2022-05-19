@@ -16,7 +16,7 @@ export const VideoListing = () => {
     let videofetch = async () => {
       try {
         let response = await axios.get("/api/videos");
-        console.log("response", response);
+
         if (response.status === 200) {
           setVideo(response.data.videos);
         } else {
