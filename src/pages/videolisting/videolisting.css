@@ -1,0 +1,40 @@
+.video-list-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+  height: 3rem;
+  align-items: center;
+  background-color: aquamarine;
+}
+
+.left-items {
+  display: inherit;
+  padding-left: 2rem;
+}
+
+.nav-btn {
+  padding-right: 2rem;
+}
+
+.search-box {
+  width: 20rem;
+  overflow: hidden;
+}
+
+.video-list {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  min-height: 35rem;
+}
+
+.below-nav {
+  width: 100vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+}
