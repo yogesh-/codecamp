@@ -15,7 +15,6 @@ export const VideoListing = () => {
   const [video, setVideo] = useState([]);
   // const [show, setShow] = useState(false);
   let tokenDb = localStorage.getItem("token");
-  console.log(tokenDb);
 
   useEffect(() => {
     let videofetch = async () => {
@@ -42,7 +41,10 @@ export const VideoListing = () => {
               setSidebar(!sidebar);
             }}
           />
-          <div className="logo">&#60; CodeTube &frasl; &#62;</div>
+
+          <div className="logo">
+            <Link to="/">&#60; CodeTube &frasl; &#62;</Link>
+          </div>
         </div>
         <div className="search-box">
           <Search />
@@ -73,7 +75,7 @@ export const VideoListing = () => {
       </div>
       {/* Video Listing */}
       <div className="video-list">
-        <div className={`${sidebar ? "hide" : ""}`}>
+        <div className={`menu ${sidebar ? "hide" : ""}`}>
           <Sidebar />
         </div>
         <div className="below-nav">

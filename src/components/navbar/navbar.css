@@ -11,10 +11,12 @@
   margin-left: 1rem;
   font-weight: 900;
   font-size: large;
+  text-decoration: none;
 }
 body {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 .theme-toggle {

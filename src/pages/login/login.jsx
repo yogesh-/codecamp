@@ -42,6 +42,8 @@ export default function Login() {
   const [loginEmail, setLoginEmail] = useState();
   const [loginPwd, setLoginPwd] = useState();
 
+  // to remove netlify deploy error
+  console.log(setLoginEmail, setLoginPwd);
   let userEmail = localStorage.getItem("userEmail");
   let userPwd = localStorage.getItem("userPwd");
 
@@ -76,7 +78,6 @@ export default function Login() {
       console.log("helooooo", loginapi.data.encodedToken);
       localStorage.setItem("token", loginapi.data.encodedToken);
       setIsToken(true);
-      console.log(navigate, isToken, setLoginEmail, setLoginPwd);
     } catch (error) {
       console.log("guest login issue", error);
     }

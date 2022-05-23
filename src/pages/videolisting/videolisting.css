@@ -33,6 +33,17 @@
   width: 100vw;
 }
 
+.logo {
+  text-decoration: none;
+}
+
+.menu {
+  border-right: 1px solid grey;
+}
+/* .video-list-nav .left-items .logo {
+  text-decoration: none !important;
+} */
+
 @media only screen and (max-width: 600px) {
   .logo {
     display: none;

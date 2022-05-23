@@ -49,7 +49,7 @@ export default function SignUp() {
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    console.log(name, value);
+
     setInputData((values) => ({ ...values, [name]: value }));
   };
 
@@ -84,7 +84,7 @@ export default function SignUp() {
 
           localStorage.setItem("token", response.data.encodedToken);
           let signToken = localStorage.getItem("token");
-          console.log(signToken);
+
           if (signToken) {
             navigate("/");
           }
