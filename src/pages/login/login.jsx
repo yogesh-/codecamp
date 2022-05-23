@@ -76,7 +76,6 @@ export default function Login() {
       console.log("helooooo", loginapi.data.encodedToken);
       localStorage.setItem("token", loginapi.data.encodedToken);
       setIsToken(true);
-      console.log(navigate, isToken, setLoginEmail, setLoginPwd);
     } catch (error) {
       console.log("guest login issue", error);
     }

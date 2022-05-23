@@ -42,7 +42,10 @@ export const VideoListing = () => {
               setSidebar(!sidebar);
             }}
           />
-          <div className="logo">&#60; CodeTube &frasl; &#62;</div>
+
+          <div className="logo">
+            <Link to="/">&#60; CodeTube &frasl; &#62;</Link>
+          </div>
         </div>
         <div className="search-box">
           <Search />
