@@ -4,6 +4,7 @@ li {
   align-items: center;
   list-style: none;
   padding-bottom: 1rem;
+  text-decoration: none;
 }
 
 ul {
@@ -17,9 +18,13 @@ ul {
 
 .sidebar-menu {
   width: 9rem;
-  border: 2px solid red;
+  padding-right: 0.5rem;
 }
 
 .hide {
   display: none;
+}
+
+li a {
+  text-decoration: none;
 }

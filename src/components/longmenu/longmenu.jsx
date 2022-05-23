@@ -4,19 +4,17 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import "./longmenu.css";
-import { useDispatch, useSelector } from "react-redux";
-import { addToLikes } from "../../features/likes/likes";
+import { useDispatch } from "react-redux";
+import { addToLikes } from "../../features/likes/likes-slice";
 
 const ITEM_HEIGHT = 48;
 
 export const LongMenu = (props) => {
-  const liker = useSelector((state) => state.likes);
-  console.log(liker);
   const dispatch = useDispatch();
 
   const options = [
     { name: "Add to Likes", action: () => dispatch(addToLikes(props.video)) },
-    { name: "Two", action: () => console.log("qqq2") },
+    { name: "Add to Watch Later", action: () => console.log("qqq2") },
   ];
 
   const [anchorEl, setAnchorEl] = React.useState(null);

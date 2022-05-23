@@ -15,7 +15,6 @@ export const VideoListing = () => {
   const [video, setVideo] = useState([]);
   // const [show, setShow] = useState(false);
   let tokenDb = localStorage.getItem("token");
-  console.log(tokenDb);
 
   useEffect(() => {
     let videofetch = async () => {
@@ -76,7 +75,7 @@ export const VideoListing = () => {
       </div>
       {/* Video Listing */}
       <div className="video-list">
-        <div className={`${sidebar ? "hide" : ""}`}>
+        <div className={`menu ${sidebar ? "hide" : ""}`}>
           <Sidebar />
         </div>
         <div className="below-nav">

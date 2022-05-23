@@ -6,13 +6,14 @@ const initialState = {
   status: null,
 };
 
-let encodedToken = "abcnvdjnv3r34rndnv";
+let encodedToken = "";
 
 export const addToLikes = createAsyncThunk(
   "likes/addToLikes",
   async (video) => {
     try {
-      const res = await axios.post(
+      encodedToken = localStorage.getItem("token");
+      const response = await axios.post(
         "/api/user/likes",
         { video },
         {
@@ -21,8 +22,8 @@ export const addToLikes = createAsyncThunk(
           },
         }
       );
-      console.log("25:response", res.data.likes);
-      return res.data.likes;
+
+      return response.data.likes;
     } catch (error) {
       console.log(error);
     }
@@ -50,6 +51,7 @@ const likeSlice = createSlice({
     },
     [addToLikes.fulfilled]: (state, action) => {
       state.likes = action.payload;
+
       state.status = "success";
     },
     [addToLikes.rejected]: (state) => {
