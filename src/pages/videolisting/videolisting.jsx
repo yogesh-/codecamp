@@ -7,10 +7,15 @@ import { Sidebar } from "../../components/sidebar/sidebar";
 import { useEffect, useState } from "react";
 import { Topbar } from "../../components/topBar/topbar";
 import axios from "axios";
+import { LongMenu } from "../../components/longmenu/longmenu";
+import { Link } from "react-router-dom";
 
 export const VideoListing = () => {
   const [sidebar, setSidebar] = useState(false);
   const [video, setVideo] = useState([]);
+  // const [show, setShow] = useState(false);
+  let tokenDb = localStorage.getItem("token");
+  console.log(tokenDb);
 
   useEffect(() => {
     let videofetch = async () => {
@@ -43,9 +48,27 @@ export const VideoListing = () => {
           <Search />
         </div>
         <div className="nav-btn">
-          <Button variant="contained" color="success" sx={{ mt: 1, mb: 1 }}>
-            LOGIN
-          </Button>
+          {tokenDb ? (
+            <Button
+              component={Link}
+              to="/logout"
+              variant="contained"
+              color="success"
+              sx={{ mt: 1, mb: 1 }}
+            >
+              LOGOUT
+            </Button>
+          ) : (
+            <Button
+              component={Link}
+              to="/login"
+              variant="contained"
+              color="success"
+              sx={{ mt: 1, mb: 1 }}
+            >
+              LOGIN
+            </Button>
+          )}
         </div>
       </div>
       {/* Video Listing */}
@@ -82,6 +105,9 @@ export const VideoListing = () => {
                               </p>
                             </div>
                           </div>
+                        </div>
+                        <div className="longmenu">
+                          <LongMenu video={item} />
                         </div>
                       </div>
                     </div>

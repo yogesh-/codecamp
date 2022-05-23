@@ -9,7 +9,6 @@ export const Trending = () => {
     let trendCall = async () => {
       try {
         let response = await axios.get("/api/videos");
-        console.log("response", response);
         if (response.status === 200) {
           setTrend(response.data.videos);
         } else {

@@ -25,7 +25,7 @@
 .video-text img {
   border-radius: 50%;
   height: 36px;
-  margin-left: 10px;
+  margin-left: 0;
 }
 
 .thumbnail {
@@ -60,4 +60,8 @@
 .channel-stats p {
   color: #aaaaaa;
   font-size: 12px;
+}
+
+.longmenu {
+  padding: 0;
 }
