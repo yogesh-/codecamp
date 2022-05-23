@@ -42,6 +42,8 @@ export default function Login() {
   const [loginEmail, setLoginEmail] = useState();
   const [loginPwd, setLoginPwd] = useState();
 
+  // to remove netlify deploy error
+  console.log(setLoginEmail, setLoginPwd);
   let userEmail = localStorage.getItem("userEmail");
   let userPwd = localStorage.getItem("userPwd");
 
