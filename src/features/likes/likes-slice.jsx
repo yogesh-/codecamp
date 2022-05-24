@@ -51,7 +51,7 @@ const likeSlice = createSlice({
     },
     [addToLikes.fulfilled]: (state, action) => {
       state.likes = action.payload;
-
+      console.log("from slice", state.likes);
       state.status = "success";
     },
     [addToLikes.rejected]: (state) => {

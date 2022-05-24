@@ -16,10 +16,13 @@ export const Sidebar = () => {
               <div className="icon-name">Explore</div>
             </li>
           </Link>
-          <li>
-            <WatchLaterIcon sx={{ fontSize: 40 }} />
-            <div className="icon-name">Watch Later</div>
-          </li>
+
+          <Link to="/watchlater">
+            <li>
+              <WatchLaterIcon sx={{ fontSize: 40 }} />
+              <div className="icon-name">Watch Later</div>
+            </li>
+          </Link>
 
           <Link to="/likes">
             <li>
