@@ -4,16 +4,17 @@ import "./videolisting.css";
 import "../../components/trending/trending.css";
 import Button from "@mui/material/Button";
 import { Sidebar } from "../../components/sidebar/sidebar";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Topbar } from "../../components/topBar/topbar";
 import axios from "axios";
 import { LongMenu } from "../../components/longmenu/longmenu";
 import { Link } from "react-router-dom";
+import { videoContext } from "../../context/videoContext";
 
 export const VideoListing = () => {
+  const { videoList, setVideoList } = useContext(videoContext);
   const [sidebar, setSidebar] = useState(false);
-  const [video, setVideo] = useState([]);
-  // const [show, setShow] = useState(false);
+
   let tokenDb = localStorage.getItem("token");
 
   useEffect(() => {
@@ -22,7 +23,7 @@ export const VideoListing = () => {
         let response = await axios.get("/api/videos");
 
         if (response.status === 200) {
-          setVideo(response.data.videos);
+          setVideoList(response.data.videos);
         } else {
         }
       } catch (error) {
@@ -30,7 +31,7 @@ export const VideoListing = () => {
       }
     };
     videofetch();
-  }, []);
+  });
   return (
     // Navigation
     <div className="main-container">
@@ -80,19 +81,21 @@ export const VideoListing = () => {
         </div>
         <div className="below-nav">
           <Topbar />
-          {video.length === 0 ? (
+          {videoList.length === 0 ? (
             <div>Loading...</div>
           ) : (
             <div className="trending-container">
-              {video.map((item) => {
+              {videoList.map((item) => {
                 return (
                   <li key={item._id}>
                     <div className="video-container">
-                      <img
-                        className="thumbnail"
-                        src={item.thumbnail}
-                        alt="thumbnail"
-                      ></img>
+                      <Link to={`/playvideo/${item._id}`}>
+                        <img
+                          className="thumbnail"
+                          src={item.thumbnail}
+                          alt="thumbnail"
+                        ></img>
+                      </Link>
                       <p className="duration">{item.duration}</p>
                       <div className="video-text">
                         <img src={item.creator_icon} alt="icon"></img>
