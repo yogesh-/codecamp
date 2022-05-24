@@ -7,6 +7,7 @@ import { LogOut } from "./pages/logout/logout";
 import { Likes } from "./pages/likes/likes";
 import { WatchLater } from "./pages/watchLater/watchLater";
 import { SingleVideoPage } from "./pages/singleVideoPage/singelVideoPage";
+import { History } from "./pages/history/history";
 
 export const Routing = () => {
   return (
@@ -20,6 +21,7 @@ export const Routing = () => {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/likes" element={<Likes />} />
           <Route path="/watchlater" element={<WatchLater />} />
+          <Route path="/history" element={<History />} />
           <Route path="/playvideo/:videoId" element={<SingleVideoPage />} />
         </Route>
       </Routes>
