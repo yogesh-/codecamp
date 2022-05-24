@@ -6,6 +6,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import "./longmenu.css";
 import { useDispatch } from "react-redux";
 import { addToLikes } from "../../features/likes/likes-slice";
+import { addToWatchLater } from "../../features/watchLater/watchLater-slice";
 
 const ITEM_HEIGHT = 48;
 
@@ -14,7 +15,10 @@ export const LongMenu = (props) => {
 
   const options = [
     { name: "Add to Likes", action: () => dispatch(addToLikes(props.video)) },
-    { name: "Add to Watch Later", action: () => console.log("qqq2") },
+    {
+      name: "Add to Watch Later",
+      action: () => dispatch(addToWatchLater(props.video)),
+    },
   ];
 
   const [anchorEl, setAnchorEl] = React.useState(null);
