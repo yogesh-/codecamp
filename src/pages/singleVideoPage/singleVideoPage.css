@@ -1,0 +1,29 @@
+.video-play-main {
+  padding-top: 2vh;
+  min-height: 100vh;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100vw;
+  margin-left: 3vw;
+
+  position: relative;
+}
+
+.video {
+  width: 95%;
+  height: 55vh;
+  margin: 2rem 0 1rem 0rem;
+  border: 2px solid var(--gray-color);
+}
+
+.video iframe {
+  width: 80%;
+  height: 55vh;
+}
+
+.creator {
+  display: flex;
+  flex-direction: row;
+}

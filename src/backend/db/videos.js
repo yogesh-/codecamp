@@ -16,6 +16,7 @@ export const videos = [
     posted_at: "3 days ago",
     category: "trending",
     videoId: "mTz0GXj8NN0",
+    url: "https://www.youtube.com/embed/mTz0GXj8NN0",
     thumbnail: "https://i3.ytimg.com/vi/mTz0GXj8NN0/maxresdefault.jpg",
     creator_icon:
       "https://yt3.ggpht.com/ytc/AKedOLSxHOOxxa9Af8Bfb2XMop3lm4tor9bViWiC-d5aaw=s900-c-k-c0x00ffffff-no-rj",
@@ -32,6 +33,7 @@ export const videos = [
     posted_at: "1 week ago",
     category: "trending",
     videoId: "hdGsFpZ0J2E",
+    url: "https://www.youtube.com/embed/hdGsFpZ0J2E",
     thumbnail: "https://img.youtube.com/vi/hdGsFpZ0J2E/maxresdefault.jpg",
     creator_icon:
       "https://yt3.ggpht.com/ytc/AKedOLQpvSjzSCSo8ZKCjBZS7TRX7omb_kyQirh2zgEY=s900-c-k-c0x00ffffff-no-rj",
@@ -48,6 +50,7 @@ export const videos = [
     posted_at: "1 day ago",
     category: "trending",
     videoId: "zQyrwxMPm88",
+    url: "https://www.youtube.com/embed/zQyrwxMPm88",
     thumbnail: "https://img.youtube.com/vi/zQyrwxMPm88/maxresdefault.jpg",
     creator_icon:
       "	https://yt3.ggpht.com/ytc/AKedOLR5CDv14gL4DQ7I4gxIlBMY6u-CNsq2qfeev48R2g=s900-c-k-c0x00ffffff-no-rj",
@@ -64,6 +67,7 @@ export const videos = [
     posted_at: "1 month ago",
     category: "trending",
     videoId: "u044iM9xsWU",
+    url: "https://www.youtube.com/embed/u044iM9xsWU",
     thumbnail: "https://img.youtube.com/vi/u044iM9xsWU/maxresdefault.jpg",
     creator_icon:
       "https://yt3.ggpht.com/ytc/AKedOLT1tLx7BgAa7_SHaXE0hDRjQu1BRihsEDZ3lmUUcg=s900-c-k-c0x00ffffff-no-rj",
@@ -80,6 +84,7 @@ export const videos = [
     posted_at: "24 hours ago",
     category: "trending",
     videoId: "NZoRlVi3MjQ",
+    url: "https://www.youtube.com/embed/NZoRlVi3MjQ",
     thumbnail: "https://img.youtube.com/vi/NZoRlVi3MjQ/maxresdefault.jpg",
     creator_icon:
       "https://yt3.ggpht.com/4-_80xHFXwX27JazINVIscTnJMZyJ2cpu3oa_SZr3ICSqiTb_YMrPJfB1wTxvPfRmFFJfaQ8=s900-c-k-c0x00ffffff-no-rj",
@@ -96,6 +101,7 @@ export const videos = [
     posted_at: "last week",
     category: "trending",
     videoId: "8JJ101D3knE",
+    url: "https://www.youtube.com/embed/8JJ101D3knE",
     thumbnail: "https://img.youtube.com/vi/8JJ101D3knE/maxresdefault.jpg",
     creator_icon:
       "https://yt3.ggpht.com/tBEPr-zTNXEeae7VZKSZYfiy6azzs9OHowq5ZvogJeHoVtKtEw2PXSwzMBKVR7W0MI7gyND8=s900-c-k-c0x00ffffff-no-rj",
@@ -112,6 +118,7 @@ export const videos = [
     posted_at: "18 hours ago",
     category: "trending",
     videoId: "E0Qqpn8ymko",
+    url: "https://www.youtube.com/embed/E0Qqpn8ymko",
     thumbnail: "https://img.youtube.com/vi/E0Qqpn8ymko/maxresdefault.jpg",
     creator_icon:
       "https://yt3.ggpht.com/ytc/AKedOLT3EnMXtIOvDT4CL7obl0-acSZCBhMuapXBQFksVQ=s900-c-k-c0x00ffffff-no-rj",
@@ -128,6 +135,7 @@ export const videos = [
     posted_at: "2 weeks ago",
     category: "trending",
     videoId: "o1chMISeTC0",
+    url: "https://www.youtube.com/embed/o1chMISeTC0",
     thumbnail: "https://img.youtube.com/vi/o1chMISeTC0/maxresdefault.jpg",
     creator_icon:
       "https://yt3.ggpht.com/t_TrBp9Vyn2nhEJh5uz6Z9f8JbxVA_KZvkJSLiJadQRCmFF_wkHmnTL1y8dCqP7VWU4lLLmBmw=s900-c-k-c0x00ffffff-no-rj",

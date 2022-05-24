@@ -5,6 +5,7 @@ import App from "./App";
 import { makeServer } from "./server";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
+import { VideoContextProvider } from "./context/videoContext.jsx";
 
 // Call make Server
 makeServer();
@@ -14,9 +15,11 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
+      <VideoContextProvider>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </VideoContextProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
