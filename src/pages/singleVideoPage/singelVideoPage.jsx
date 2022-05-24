@@ -2,12 +2,15 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Search } from "../../components/searchBox/searchbox";
 import Button from "@mui/material/Button";
 import { Sidebar } from "../../components/sidebar/sidebar";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { videoContext } from "../../context/videoContext";
 import "./singleVideoPage.css";
+import { useDispatch } from "react-redux";
+import { addToHistory } from "../../features/history/history-slice";
 
 export const SingleVideoPage = () => {
+  const dispatch = useDispatch();
   const [sidebar, setSidebar] = useState(false);
   let encodedToken = localStorage.getItem("token");
   const { videoList } = useContext(videoContext);
@@ -15,6 +18,11 @@ export const SingleVideoPage = () => {
 
   const playVideo = videoList.find((video) => video._id === videoId.videoId);
   const { title, creator, views, subscribers, url } = playVideo;
+
+  useEffect((event) => {
+    dispatch(addToHistory(playVideo));
+    event.preventDefault();
+  }, []);
 
   return (
     // Navigation
