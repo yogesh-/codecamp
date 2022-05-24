@@ -22,7 +22,7 @@ export const SingleVideoPage = () => {
   useEffect((event) => {
     dispatch(addToHistory(playVideo));
     event.preventDefault();
-  }, []);
+  });
 
   return (
     // Navigation
