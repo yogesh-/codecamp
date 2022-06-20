@@ -2,8 +2,12 @@ import Navbar from "../../components/navbar/navbar";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import "./logout.css";
+import { useEffect } from "react";
 
 export const LogOut = () => {
+  useEffect(() => {
+    localStorage.removeItem("token");
+  });
   return (
     <>
       <Navbar />

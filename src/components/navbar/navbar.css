@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100vw;
+  /* width: 100vw; */
   align-items: center;
   background-color: aquamarine;
 }
@@ -21,4 +21,8 @@ body {
 
 .theme-toggle {
   margin-right: 1.5rem;
+}
+
+button {
+  padding-right: 1rem;
 }

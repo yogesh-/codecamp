@@ -1,5 +1,5 @@
 import "../navbar/navbar.css";
-import { MaterialUISwitch } from "../darkmode/darkmode";
+// import { MaterialUISwitch } from "../darkmode/darkmode";
 import { Link } from "react-router-dom";
 
 const NavbarLoginSignup = () => {
@@ -9,9 +9,9 @@ const NavbarLoginSignup = () => {
         <Link to="/">
           <div className="logo">&#60; CodeTube &frasl; &#62;</div>
         </Link>
-        <div className="theme-toggle">
+        {/* <div className="theme-toggle">
           <MaterialUISwitch />
-        </div>
+        </div> */}
       </div>
     </>
   );

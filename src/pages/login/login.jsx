@@ -70,12 +70,11 @@ export default function Login() {
     e.preventDefault();
     try {
       let data = {
-        email: "adarshbalika@gmail.com",
-        password: "adarshBalika123",
+        email: "yogesh@gmail.com",
+        password: "yogesh",
       };
       let loginapi = await axios.post("/api/auth/login", data);
 
-      console.log("helooooo", loginapi.data.encodedToken);
       localStorage.setItem("token", loginapi.data.encodedToken);
       setIsToken(true);
     } catch (error) {
