@@ -5,6 +5,8 @@ const videoContext = createContext();
 const VideoContextProvider = ({ children }) => {
   const [videoList, setVideoList] = useState([]);
 
+  // put useffect here
+
   return (
     <div>
       <videoContext.Provider value={{ videoList, setVideoList }}>

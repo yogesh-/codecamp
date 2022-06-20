@@ -66,9 +66,9 @@ export const History = () => {
         </div>
         {encodedToken ? (
           <div className="video-container-main">
-            {historyVideosall.map((item) => {
+            {historyVideosall.map((item, index) => {
               return (
-                <li key={item._id}>
+                <li key={index}>
                   <div className="video-container">
                     <img
                       className="thumbnail"
