@@ -4,6 +4,7 @@ import jsIcon from "../../assets/js-brands.svg";
 import reactIcon from "../../assets/react-brands.svg";
 import Button from "@mui/material/Button";
 import "./categories.css";
+import { Link } from "react-router-dom";
 
 export const Categories = () => {
   return (
@@ -22,7 +23,9 @@ export const Categories = () => {
             language for documents designed to be displayed in a web browser.
           </p>
           <div className="card-button">
-            <Button variant="contained">START LEARNING</Button>
+            <Button component={Link} to="/videos" variant="contained">
+              START LEARNING
+            </Button>
           </div>
         </div>
         {/* CSS card */}
@@ -37,7 +40,9 @@ export const Categories = () => {
             HTML
           </p>
           <div className="card-button">
-            <Button variant="contained">START LEARNING</Button>
+            <Button component={Link} to="/videos" variant="contained">
+              START LEARNING
+            </Button>
           </div>
         </div>
         {/* Js card */}
@@ -51,7 +56,9 @@ export const Categories = () => {
             one of the core technologies of the World Wide Web.
           </p>
           <div className="card-button">
-            <Button variant="contained">START LEARNING</Button>
+            <Button component={Link} to="/videos" variant="contained">
+              START LEARNING
+            </Button>
           </div>
         </div>
         {/* ReactJs card */}
@@ -66,7 +73,9 @@ export const Categories = () => {
             frontend framework.
           </p>
           <div className="card-button">
-            <Button variant="contained">START LEARNING</Button>
+            <Button component={Link} to="/videos" variant="contained">
+              START LEARNING
+            </Button>
           </div>
         </div>
       </div>
