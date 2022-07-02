@@ -1,5 +1,5 @@
 import MenuIcon from "@mui/icons-material/Menu";
-import { Search } from "../../components/searchBox/searchbox";
+// import { Search } from "../../components/searchBox/searchbox";
 import "./videolisting.css";
 import "../../components/trending/trending.css";
 import Button from "@mui/material/Button";
@@ -11,11 +11,30 @@ import { LongMenu } from "../../components/longmenu/longmenu";
 import { Link } from "react-router-dom";
 import { videoContext } from "../../context/videoContext";
 
+// new, building search component here
+import TextField from "@mui/material/TextField";
+
 export const VideoListing = () => {
   const { videoList, setVideoList } = useContext(videoContext);
+  const [list, setList] = useState();
   const [sidebar, setSidebar] = useState(false);
+  const [search, setSearch] = useState("");
 
   let tokenDb = localStorage.getItem("token");
+  let searchResult;
+  const searchHandler = (e) => {
+    console.log("this is video arr", list);
+    var searchTerm = e.target.value.toLowerCase();
+    setSearch(searchTerm);
+    console.log("from search bar", search);
+    if (list.length !== 0) {
+      searchResult = list.filter((item) =>
+        item.title.toLowerCase().includes(searchTerm)
+      );
+      setVideoList(searchResult);
+    } else {
+    }
+  };
 
   useEffect(() => {
     let videofetch = async () => {
@@ -23,7 +42,8 @@ export const VideoListing = () => {
         let response = await axios.get("/api/videos");
 
         if (response.status === 200) {
-          setVideoList(response.data.videos);
+          var videoArr = response.data.videos;
+          setList(videoArr);
         } else {
         }
       } catch (error) {
@@ -48,7 +68,15 @@ export const VideoListing = () => {
           </div>
         </div>
         <div className="search-box">
-          <Search />
+          {/* <Search /> */}
+          <TextField
+            id="search-bar"
+            className="text"
+            variant="outlined"
+            placeholder="Search..."
+            size="small"
+            onChange={searchHandler}
+          />
         </div>
         <div className="nav-btn">
           {tokenDb ? (
