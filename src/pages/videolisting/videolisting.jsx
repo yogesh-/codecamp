@@ -1,5 +1,4 @@
 import MenuIcon from "@mui/icons-material/Menu";
-// import { Search } from "../../components/searchBox/searchbox";
 import "./videolisting.css";
 import "../../components/trending/trending.css";
 import Button from "@mui/material/Button";
@@ -11,7 +10,6 @@ import { LongMenu } from "../../components/longmenu/longmenu";
 import { Link } from "react-router-dom";
 import { videoContext } from "../../context/videoContext";
 
-// new, building search component here
 import TextField from "@mui/material/TextField";
 
 export const VideoListing = () => {
@@ -19,23 +17,53 @@ export const VideoListing = () => {
   const [list, setList] = useState();
   const [sidebar, setSidebar] = useState(false);
   const [search, setSearch] = useState("");
+  const [flag, setFlag] = useState(false);
 
   let tokenDb = localStorage.getItem("token");
   let searchResult;
+
+  var categoryResult;
+
+  const categoryHandler = (arg) => {
+    setFlag(true);
+    if (arg === "all") {
+      categoryResult = list;
+      setVideoList(categoryResult);
+      console.log(categoryResult, "from if block");
+    } else {
+      categoryResult = list.filter((item) => item.category === arg);
+      console.log(categoryResult, "else block");
+      setVideoList(categoryResult);
+    }
+  };
+
   const searchHandler = (e) => {
-    console.log("this is video arr", list);
     var searchTerm = e.target.value.toLowerCase();
+    console.log(searchTerm, "searc term changing");
     setSearch(searchTerm);
-    console.log("from search bar", search);
-    if (list.length !== 0) {
+
+    if (searchTerm === "") {
+      console.log("empty search");
+      setVideoList(list);
+    }
+
+    if (flag) {
+      searchResult = videoList.filter((item) =>
+        item.title.toLowerCase().includes(searchTerm)
+      );
+      console.log(searchResult);
+      setVideoList(searchResult);
+    } else {
       searchResult = list.filter((item) =>
         item.title.toLowerCase().includes(searchTerm)
       );
       setVideoList(searchResult);
-    } else {
     }
   };
 
+  if (search === "" && categoryResult === null) {
+    setVideoList(list);
+  }
   useEffect(() => {
     let videofetch = async () => {
       try {
@@ -51,7 +79,7 @@ export const VideoListing = () => {
       }
     };
     videofetch();
-  });
+  }, []);
   return (
     // Navigation
     <div className="main-container">
@@ -108,7 +136,7 @@ export const VideoListing = () => {
           <Sidebar />
         </div>
         <div className="below-nav">
-          <Topbar />
+          <Topbar func={categoryHandler} />
           {videoList.length === 0 ? (
             <div>Loading...</div>
           ) : (
