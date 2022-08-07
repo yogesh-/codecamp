@@ -4,7 +4,7 @@ import axios from "axios";
 let encodedToken = "";
 
 const initialState = {
-  historyVideos: ["okay"],
+  historyVideos: [],
   status: null,
 };
 
@@ -24,7 +24,7 @@ export const addToHistory = createAsyncThunk(
       );
       return res.data.history;
     } catch (error) {
-      alert(error);
+      console.log(error);
     }
   }
 );
@@ -72,7 +72,7 @@ const historySlice = createSlice({
     },
     [addToHistory.fulfilled]: (state, action) => {
       state.historyVideos = action.payload;
-      console.log("from History slice", state.historyVideos);
+      console.log("from History slice", action.payload);
       state.status = "success";
     },
     [addToHistory.rejected]: (state) => {
